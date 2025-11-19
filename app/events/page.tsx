@@ -1,67 +1,55 @@
 import { Calendar, Clock, MapPin, Users, Wrench, Recycle, Heart, Plug, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EventsPage() {
   const upcomingEvents = [
     {
       date: {
-        day: '30',
+        day: '26',
         month: 'Nov',
         year: '2025',
       },
-      title: 'Repair Café',
-      description: 'Venez réparer vos objets du quotidien avec l\'aide de nos experts bénévoles. Prolongez la vie de vos appareils et apprenez à les réparer.',
-      time: '9h00 - 17h00',
-      location: 'Fab Lab La Multiprise',
-      capacity: '50 personnes',
-      category: 'repair',
-      icon: Recycle,
-      color: 'green',
+      title: 'Journée des Solutions face au Handicap',
+      description: 'Deuxième édition de notre journée dédiée aux solutions techniques pour le handicap. Rencontre avec les acteurs locaux et démonstrations.',
+      time: '10h00 - 19h00',
+      location: 'Foyer Saint Bond, Avenue du Stade, Paron',
+      capacity: 'Accès libre',
+      category: 'humanlab',
+      icon: Heart,
+      color: 'red',
+      image: '/images/evenements/journee-solutions-2026.png',
     },
     {
       date: {
-        day: '04',
+        day: '06',
         month: 'Déc',
         year: '2025',
       },
-      title: 'Portes Ouvertes',
-      description: 'Découverte du Fab Lab, démonstrations des machines, rencontre avec l\'équipe. Entrée libre et gratuite.',
-      time: '14h00 - 18h00',
-      location: 'Fab Lab La Multiprise',
+      title: 'Foire de Sens 2025',
+      description: 'Retrouvez le Fab Lab La Multiprise à la Foire de Sens ! Démonstrations et découverte de nos activités.',
+      time: '10h00 - 18h00',
+      location: 'Parc des Expositions de Sens',
       capacity: 'Accès libre',
       category: 'open-house',
       icon: Users,
       color: 'blue',
+      image: '/images/evenements/affiche-foire-sens-2025.jpg',
     },
     {
       date: {
-        day: '14',
+        day: '21',
         month: 'Déc',
         year: '2025',
       },
-      title: 'Formation Impression 3D',
-      description: 'Initiation complète à l\'impression 3D : modélisation, préparation fichiers, utilisation des imprimantes.',
-      time: '10h00 - 16h00',
-      location: 'Fab Lab La Multiprise',
-      capacity: '8 places',
-      category: 'formation',
-      icon: Wrench,
-      color: 'purple',
-    },
-    {
-      date: {
-        day: '18',
-        month: 'Déc',
-        year: '2025',
-      },
-      title: 'Atelier Déco de Noël',
-      description: 'Créez vos décorations de Noël avec la découpe laser et l\'impression 3D. Atelier familial.',
+      title: 'Repair Café de Noël',
+      description: 'Atelier de réparation spécial avant les fêtes. Venez réparer vos objets et prolonger leur vie !',
       time: '14h00 - 17h00',
       location: 'Fab Lab La Multiprise',
-      capacity: '12 places',
-      category: 'workshop',
-      icon: Wrench,
-      color: 'red',
+      capacity: '30 places',
+      category: 'repair',
+      icon: Recycle,
+      color: 'green',
     },
   ];
 
@@ -123,6 +111,16 @@ export default function EventsPage() {
                   key={index}
                   className="card group hover:border-primary transition-all"
                 >
+                  {event.image && (
+                    <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                   <div className="flex gap-4 mb-4">
                     <div className="flex-shrink-0">
                       <div className="bg-primary text-white rounded-lg px-4 py-3 text-center min-w-[80px]">

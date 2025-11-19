@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Plug, MapPin, Phone, Mail, Facebook, Clock } from 'lucide-react';
 
 const Footer = () => {
@@ -78,7 +79,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-gray-light">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>54 avenue de la Liberté<br />89100 PARON</span>
+                <span>1 Place de la Fraternité<br />89100 PARON</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-light">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
@@ -102,23 +103,88 @@ const Footer = () => {
               Horaires
             </h4>
             <ul className="space-y-2 text-sm text-gray-light">
-              <li className="flex justify-between">
-                <span className="font-medium">Lundi - Vendredi</span>
-                <span>9h - 19h</span>
+              <li>
+                <span className="font-medium">Jeudi</span>
+                <br />14h - 20h
               </li>
-              <li className="flex justify-between">
-                <span className="font-medium">Samedi</span>
-                <span>Sur RDV</span>
+              <li>
+                <span className="font-medium">3ème samedi du mois</span>
+                <br />14h - 18h
               </li>
-              <li className="flex justify-between">
-                <span className="font-medium">Dimanche</span>
-                <span>Fermé</span>
+              <li>
+                <span className="font-medium">Lun, Mar, Ven</span>
+                <br />Sur rendez-vous
               </li>
             </ul>
             <div className="mt-4">
               <Link href="/contact" className="btn-secondary text-sm py-2 px-4 inline-block">
                 Prendre rendez-vous
               </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section Partenaires */}
+      <div className="bg-gray-100 border-t border-gray-200">
+        <div className="container mx-auto px-4 py-8">
+          <h3 className="text-center text-lg font-bold text-gray-dark mb-6">Nos partenaires</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/Fondation_Orange_Couleur-noir-Droite_0.png"
+                alt="Fondation Orange"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/logo-ville-paron.png"
+                alt="Ville de Paron"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/logo-footerRFFlabs.png"
+                alt="Réseau des FabLabs français"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/logo-campus-fablab.png"
+                alt="Campus EPNAK"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/logo-epnak-couleur.png"
+                alt="EPNAK"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/Préfet_de_la_région_Bourgogne-Franche-Comté.png"
+                alt="Préfet Bourgogne Franche-Comté"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            </div>
+            <div className="h-16 w-32 relative">
+              <Image
+                src="/images/logos/partenaires/REGION BFC logo fond blanc CMJN.jpg"
+                alt="Région Bourgogne Franche-Comté"
+                fill
+                className="object-contain grayscale hover:grayscale-0 transition-all"
+              />
             </div>
           </div>
         </div>

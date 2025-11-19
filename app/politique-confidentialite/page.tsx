@@ -98,7 +98,7 @@ export default function PolitiqueConfidentialitePage() {
                 <div>
                   <p className="text-gray-dark">
                     <strong>Fab Lab La Multiprise</strong><br />
-                    54 avenue de la Liberté<br />
+                    1 Place de la Fraternité<br />
                     89100 PARON<br />
                     Email : fablab@lamultiprise.fr<br />
                     Téléphone : 06 95 45 85 76

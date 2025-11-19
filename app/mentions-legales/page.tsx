@@ -25,10 +25,12 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold text-gray-dark mb-4">Éditeur du site</h2>
             <p className="text-gray-light mb-6">
               <strong>Association Fab Lab La Multiprise</strong><br />
-              54 avenue de la Liberté<br />
+              La Multiprise 89, enregistrée à la préfecture de l'Yonne<br />
+              1 Place de la Fraternité<br />
               89100 PARON<br />
               Téléphone : 06 95 45 85 76<br />
-              Email : fablab@lamultiprise.fr
+              Email : fablab@lamultiprise.fr<br />
+              Site web : www.lamultiprise.fr
             </p>
 
             <h2 className="text-2xl font-bold text-gray-dark mb-4">Directeur de publication</h2>
@@ -40,7 +42,11 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold text-gray-dark mb-4">Hébergement</h2>
             <p className="text-gray-light mb-6">
               Ce site est hébergé par :<br />
-              [À compléter selon votre hébergeur]
+              <strong>Vercel Inc.</strong><br />
+              340 S Lemon Ave #4133<br />
+              Walnut, CA 91789<br />
+              États-Unis<br />
+              Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">vercel.com</a>
             </p>
 
             <h2 className="text-2xl font-bold text-gray-dark mb-4">Propriété intellectuelle</h2>

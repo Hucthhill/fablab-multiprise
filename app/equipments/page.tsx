@@ -1,5 +1,6 @@
 import { Plug, Printer, Zap, Scissors, Cpu, Wrench, Box, Paintbrush } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EquipmentsPage() {
   const equipments = [
@@ -8,14 +9,16 @@ export default function EquipmentsPage() {
       icon: Printer,
       items: [
         {
-          name: 'Imprimantes 3D FDM',
-          description: 'Plusieurs imprimantes pour prototypage rapide en PLA, ABS, PETG',
-          specs: 'Volume max: 300x300x400mm',
+          name: 'Imprimante 3D Elegoo',
+          description: 'Imprimante 3D FDM pour prototypage rapide en PLA, ABS, PETG',
+          specs: 'Volume max: 220x220x250mm',
+          image: '/images/equipements/imprimante-3d-elegoo.png',
         },
         {
-          name: 'Imprimante résine',
-          description: 'Impression haute résolution pour détails fins',
-          specs: 'Résolution: 50 microns',
+          name: 'Imprimante 3D BambuLab',
+          description: 'Imprimante 3D haute vitesse avec système multi-couleurs',
+          specs: 'Volume max: 256x256x256mm',
+          image: '/images/equipements/imprimante-3d-bambulab.png',
         },
       ],
     },
@@ -24,14 +27,16 @@ export default function EquipmentsPage() {
       icon: Zap,
       items: [
         {
-          name: 'Découpeuse laser CO2',
-          description: 'Découpe et gravure bois, acrylique, carton, cuir',
-          specs: 'Surface: 600x400mm, Puissance: 60W',
+          name: 'Découpeuse laser',
+          description: 'Découpe précise bois, acrylique, carton, cuir',
+          specs: 'Surface: 700x500mm, Puissance: 60W',
+          image: '/images/equipements/découpe-laser.png',
         },
         {
-          name: 'Découpeuse vinyle',
-          description: 'Découpe de vinyle adhésif pour stickers et marquage',
-          specs: 'Largeur max: 600mm',
+          name: 'Graveur laser',
+          description: 'Gravure de détails fins sur différents matériaux',
+          specs: 'Zone de gravure: 400x400mm',
+          image: '/images/equipements/graveur-laser.jpg',
         },
       ],
     },
@@ -40,19 +45,28 @@ export default function EquipmentsPage() {
       icon: Scissors,
       items: [
         {
-          name: 'Brodeuse numérique',
+          name: 'Brodeuse numérique Brother',
           description: 'Broderie personnalisée sur textile',
           specs: 'Zone de broderie: 200x300mm',
+          image: '/images/equipements/brodeuse-num-brother.jpg',
         },
         {
           name: 'Presse à chaud',
           description: 'Transfert sur textile et objets',
           specs: 'Surface: 400x500mm',
+          image: '/images/equipements/presse-a-chaud.png',
         },
+      ],
+    },
+    {
+      category: 'Numérisation 3D',
+      icon: Box,
+      items: [
         {
-          name: 'Machines à coudre',
-          description: 'Machines électriques pour tous projets textiles',
-          specs: 'Plusieurs modèles disponibles',
+          name: 'Scanner 3D',
+          description: 'Numérisation d\'objets pour reproduction ou modification',
+          specs: 'Précision: 0.1mm',
+          image: '/images/equipements/scanner-3d.png',
         },
       ],
     },
@@ -98,22 +112,6 @@ export default function EquipmentsPage() {
         },
       ],
     },
-    {
-      category: 'Finition',
-      icon: Paintbrush,
-      items: [
-        {
-          name: 'Cabine de peinture',
-          description: 'Espace ventilé pour peinture et vernissage',
-          specs: 'Extraction des vapeurs',
-        },
-        {
-          name: 'Ponceuses',
-          description: 'Ponçage orbital et bande',
-          specs: 'Plusieurs modèles',
-        },
-      ],
-    },
   ];
 
   return (
@@ -154,6 +152,16 @@ export default function EquipmentsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="card group hover:border-primary transition-all">
+                      {item.image && (
+                        <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden bg-gray-100">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      )}
                       <div className="flex items-start gap-3 mb-4">
                         <Plug className="w-5 h-5 text-primary flex-shrink-0 mt-1 group-hover:rotate-12 transition-transform" />
                         <div className="flex-grow">
@@ -228,14 +236,14 @@ export default function EquipmentsPage() {
               {[
                 {
                   name: 'Adhésion annuelle',
-                  price: '30€',
+                  price: '24€',
                   description: 'Accès à toutes les machines après formation',
                   features: ['Formations incluses', 'Accompagnement', 'Espace de travail'],
                 },
                 {
                   name: 'Tarif étudiant',
-                  price: '15€',
-                  description: 'Tarif réduit pour les étudiants',
+                  price: '12€',
+                  description: 'Tarif réduit pour les étudiants (50%)',
                   features: ['Sur présentation carte étudiant', 'Tous les avantages', 'Support pédagogique'],
                   popular: true,
                 },

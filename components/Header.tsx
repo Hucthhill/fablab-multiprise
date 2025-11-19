@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, Plug } from 'lucide-react';
 
@@ -23,15 +24,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <Plug className="w-10 h-10 text-primary group-hover:rotate-12 transition-transform duration-300" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-ping"></div>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-dark tracking-tight">
-                LA <span className="text-primary">MULTIPRISE</span>
-              </h1>
-              <p className="text-xs text-gray-light">Fab Lab · Paron (89)</p>
+            <div className="relative h-12 w-48">
+              <Image
+                src="/images/logos/logo-multiprise-bleu-sur-blanc.jpg"
+                alt="Fab Lab La Multiprise"
+                fill
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
             </div>
           </Link>
 

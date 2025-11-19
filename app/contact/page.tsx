@@ -192,7 +192,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-gray-dark mb-2">Adresse</h3>
                       <p className="text-gray-light">
-                        54 avenue de la Liberté<br />
+                        1 Place de la Fraternité<br />
                         89100 PARON
                       </p>
                     </div>
@@ -235,9 +235,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-gray-dark mb-2">Horaires d'ouverture</h3>
                       <div className="text-gray-light space-y-1">
-                        <p>Lundi - Vendredi : 9h - 19h</p>
-                        <p>Samedi : Sur rendez-vous</p>
-                        <p>Dimanche : Fermé</p>
+                        <p><strong>Jeudi :</strong> 14h - 20h</p>
+                        <p><strong>3ème samedi du mois :</strong> 14h - 18h</p>
+                        <p><strong>Lundi, Mardi, Vendredi :</strong> Sur rendez-vous</p>
                       </div>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function ContactPage() {
                   <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
                   <p className="text-gray-500">Carte interactive</p>
                   <p className="text-sm text-gray-400">
-                    54 avenue de la Liberté, Paron
+                    1 Place de la Fraternité, Paron
                   </p>
                 </div>
               </div>
