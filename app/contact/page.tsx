@@ -2,6 +2,7 @@
 
 import { Plug, MapPin, Phone, Mail, Clock, Facebook, Send } from 'lucide-react';
 import { useState } from 'react';
+import GoogleMap from '@/components/GoogleMap';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -263,16 +264,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="card bg-gray-100 h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                  <p className="text-gray-500">Carte interactive</p>
-                  <p className="text-sm text-gray-400">
-                    1 Place de la Fraternité, Paron
-                  </p>
-                </div>
-              </div>
+              {/* Google Maps */}
+              <GoogleMap />
             </div>
           </div>
         </div>

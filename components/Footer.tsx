@@ -172,7 +172,7 @@ const Footer = () => {
             </div>
             <div className="h-16 w-32 relative">
               <Image
-                src="/images/logos/partenaires/Préfet_de_la_région_Bourgogne-Franche-Comté.png"
+                src="/images/logos/partenaires/prefet_de_la_region_bourgogne-franche-comte.png"
                 alt="Préfet Bourgogne Franche-Comté"
                 fill
                 className="object-contain grayscale hover:grayscale-0 transition-all"
